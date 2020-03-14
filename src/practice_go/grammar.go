@@ -1,4 +1,4 @@
-package main
+package src
 
 import (
 	"fmt"
@@ -10,7 +10,8 @@ var x int = 10
 
 const y int = 20
 
-func main() {
+// Grammar practice grammar function
+func Grammar() {
 
 	fmt.Println(str)
 
@@ -49,4 +50,25 @@ func main() {
 		fmt.Println(strconv.Itoa(n) + "回目")
 	}
 
+	// switch文
+	m := 3
+	switch m {
+	case 1:
+		fmt.Println("m = 1")
+	case 2:
+		fmt.Println("m = 2")
+	case 3:
+		fmt.Println("m = 3")
+	default:
+		fmt.Println("m = ?")
+	}
+
+	switch {
+	case m%2 == 1:
+		fmt.Println("m is odd")
+		// 次のcaseへ
+		fallthrough
+	default:
+		fmt.Println("default")
+	}
 }
